@@ -29,6 +29,7 @@ Output
 4
 UNFIT
 1
+
 Explanation:
 In the first test case, Rayne can choose the first and second game. Thus he gets a difference of 7-3=4 goals. Any other pair would give him a lower improvement. In the second test case, Rayne has not been improving in any match. Thus he's declared UNFIT.
 
