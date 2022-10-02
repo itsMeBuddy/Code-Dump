@@ -11,26 +11,26 @@ void display(vector<int> &vec){
     cout<<endl;
 }
 
-class TreeNode{
+class Tree{
     public:
         int val;
-        TreeNode *left;
-        TreeNode *right;
+        Tree *left;
+        Tree *right;
 
-        TreeNode(){
+        Tree(){
             val = -1;
             left = NULL;
             right = NULL;
         }
 
-        TreeNode(int val){
+        Tree(int val){
             this->val = val;
             left = NULL;
             right = NULL;
         }
 };
 
-void preOrder(TreeNode *root, vector<int> &pre){
+void preOrder(Tree *root, vector<int> &pre){
     if(root == NULL)
         return;
     pre.push_back(root->val);
@@ -38,7 +38,7 @@ void preOrder(TreeNode *root, vector<int> &pre){
     preOrder(root->right, pre);
 }
 
-void inOrder(TreeNode *root,  vector<int> &in){
+void inOrder(Tree *root,  vector<int> &in){
     if(root == NULL)
         return;
     inOrder(root->left, in);
@@ -46,7 +46,7 @@ void inOrder(TreeNode *root,  vector<int> &in){
     inOrder(root->right, in);
 }
 
-void postOrder(TreeNode *root,  vector<int> &post){
+void postOrder(Tree *root,  vector<int> &post){
     if(root == NULL)
         return;
     postOrder(root->left, post);
@@ -63,25 +63,25 @@ signed main(void){
      4 5 6 7       
     */
 
-    TreeNode *root = NULL;
+    Tree *root = NULL;
     {
-        root = new TreeNode(1);
-        root->left =  new TreeNode(2);
-        root->right =  new TreeNode(3);
-        root->left->left =  new TreeNode(4);
-        root->left->right =  new TreeNode(5);
-        root->right->left =  new TreeNode(6);
-        root->right->right =  new TreeNode(7);
+        root = new Tree(1);
+        root->left =  new Tree(2);
+        root->right =  new Tree(3);
+        root->left->left =  new Tree(4);
+        root->left->right =  new Tree(5);
+        root->right->left =  new Tree(6);
+        root->right->right =  new Tree(7);
     }
 
     // {
-    //     root = new TreeNode('a');
-    //     root->left =  new TreeNode('b');
-    //     root->right =  new TreeNode('c');
-    //     root->left->left =  new TreeNode('d');
-    //     root->left->right =  new TreeNode('e');
-    //     root->right->left =  new TreeNode('f');
-    //     root->right->right =  new TreeNode('g');
+    //     root = new Tree('a');
+    //     root->left =  new Tree('b');
+    //     root->right =  new Tree('c');
+    //     root->left->left =  new Tree('d');
+    //     root->left->right =  new Tree('e');
+    //     root->right->left =  new Tree('f');
+    //     root->right->right =  new Tree('g');
     // }
 
     vector<int> pre, in, post;
