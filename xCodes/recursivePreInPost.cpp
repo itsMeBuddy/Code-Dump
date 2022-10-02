@@ -62,7 +62,7 @@ signed main(void){
       2   3
      4 5 6 7       
     */
-    
+
     TreeNode *root = NULL;
     {
         root = new TreeNode(1);
