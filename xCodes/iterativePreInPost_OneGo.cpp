@@ -1,6 +1,7 @@
-// In return you will get a vector of the datatype so described in lineNo. 5 (default = (int))
-TC = O(4N)
-SC = O(3N);
+// In return you will get a vector of the datatype so described in lineNo. 7 (default = (int))
+
+// TC = O(4N)
+// SC = O(3N);
 
 #include<bits/stdc++.h>
 // #define int char
